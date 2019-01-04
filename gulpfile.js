@@ -1,11 +1,27 @@
 var gulp = require('gulp'),
+    clean = require('gulp-clean'),
     pug = require('gulp-pug'),
-    //server = require('gulp-server-livereload'),
     sass = require('gulp-sass'),
     prefix = require('gulp-autoprefixer'),
-    tildeImporter = require('node-sass-tilde-importer');
+    tildeImporter = require('node-sass-tilde-importer'),
+    include = require('gulp-include'),
+    server = require('gulp-webserver');
 
+//
+// Clean
+//
+// Remove previous dist folder if exists
+//
+gulp.task('clean', function () {
+    return gulp.src('dist', {read: false, allowEmpty: true})
+        .pipe(clean());
+});
+
+//
 // HTML
+//
+// Compile pug templates into html
+//
 gulp.task('html', function () {
     return gulp.src('src/templates/pages/*.pug')
         .pipe(pug({
@@ -15,32 +31,65 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
-// // start the server
-// gulp.task('webserver', function () {
-//     gulp.src('.')
-//         .pipe(server({
-//             defaultFile: 'index.html',
-//             livereload: true,
-//             open: false
-//         }));
-// });
-
-// Sass
-gulp.task('sass', function () {
-    return gulp.src('src/sass/index.scss')
-        .pipe(sass({
-            importer: tildeImporter
-        }).on('error', sass.logError))
-        .pipe(prefix({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist/css'));
+//
+// Images
+//
+// Copy images to dist
+//
+gulp.task('images', function () {
+    return gulp.src('src/img/**/*')
+        .pipe(gulp.dest('dist/images'));
 });
+
 //
-// gulp.task('sass:watch', function () {
-//     gulp.watch('./assets/sass/**/*.scss', ['sass']);
-// });
+// Sass
 //
-// // deafult taks to run all other tasks
-// gulp.task('default', ['sass', 'sass:watch', 'webserver']);
+// Compile scss files into css
+//
+gulp.task('styles', function () {
+    return gulp.src('src/sass/style.scss')
+        .pipe(sass({importer: tildeImporter}))
+        .pipe(prefix())
+        .pipe(gulp.dest('dist/styles'));
+});
+
+//
+// Scripts
+//
+// Compile js files and XXX TODO
+//
+gulp.task('scripts', function () {
+    return gulp.src('src/js/*.js')
+        .pipe(include({
+            extensions: 'js',
+            hardFail: true,
+            includePaths: [
+                __dirname + '/node_modules',
+                __dirname + '/src/js'
+            ]
+        }))
+        //.pipe(jsmin())
+        .pipe(gulp.dest('dist/scripts'));
+});
+
+//
+// Web server
+//
+// Run server from dist directory and open browser
+//
+gulp.task('server', function () {
+    gulp.src('dist').pipe(server({open: true}));
+});
+
+//
+// Compile project
+//
+// Compile project by combining tasks above
+//
+gulp.task('build',
+    gulp.series(
+        'clean',
+        gulp.parallel('html', 'images', 'styles', 'scripts'),
+        'server'
+    )
+);
