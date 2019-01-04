@@ -1,0 +1,25 @@
+@mixin hook-margin-misc() {
+    .uk-margin-xsmall {
+        margin-bottom: $margin-xsmall-margin;
+    }
+
+    * + .uk-margin-xsmall {
+        margin-top: $margin-xsmall-margin !important;
+    }
+
+    .uk-margin-xsmall-top {
+        margin-top: $margin-xsmall-margin !important;
+    }
+
+    .uk-margin-xsmall-bottom {
+        margin-bottom: $margin-xsmall-margin !important;
+    }
+
+    .uk-margin-xsmall-left {
+        margin-left: $margin-xsmall-margin !important;
+    }
+
+    .uk-margin-xsmall-right {
+        margin-right: $margin-xsmall-margin !important;
+    }
+}

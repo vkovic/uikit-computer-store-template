@@ -1,0 +1,7 @@
+@mixin hook-subnav-item() {
+    border-radius: $border-rounded-border-radius;
+    font-size: $subnav-item-font-size;
+    text-transform: $subnav-item-text-transform;
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color;
+}

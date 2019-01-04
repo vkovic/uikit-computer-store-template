@@ -1,0 +1,24 @@
+@mixin hook-form() {
+    border-radius: $border-rounded-border-radius;
+    border: $form-border-width solid $form-border;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color, border;
+}
+
+@mixin hook-form-misc() {
+    .uk-form-label-required::after {
+        content: "*";
+        margin-left: $global-xsmall-margin;
+        color: $form-danger-color;
+    }
+
+    .uk-input[type=number] {
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+        }
+    }
+}

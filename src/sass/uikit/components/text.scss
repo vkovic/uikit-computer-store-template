@@ -1,0 +1,10 @@
+@mixin hook-text-misc() {
+    .uk-text-xsmall {
+        font-size: $global-xsmall-font-size;
+        line-height: 1.2;
+    }
+
+    .uk-text-bolder {
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,19 @@
+@mixin hook-offcanvas-misc() {
+    .uk-offcanvas-bar .uk-card-header {
+        min-height: 60px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        // fixed bug in IE with "align-items: center"
+        &::after {
+            content: "";
+            font-size: 0;
+            display: block;
+            min-height: inherit;
+        }
+    }
+
+    .uk-offcanvas-bar .uk-card-header .uk-offcanvas-close {
+        position: static;
+    }
+}

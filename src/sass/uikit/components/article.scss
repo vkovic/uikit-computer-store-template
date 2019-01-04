@@ -1,0 +1,39 @@
+@mixin hook-article-misc() {
+    .uk-article-body {
+
+        &:not(:first-child) {
+            margin-top: $global-margin;
+        }
+
+        & > p,
+        & > ul,
+        & > ol,
+        & > dl,
+        & > h1,
+        & > h2,
+        & > h3,
+        & > h4,
+        & > h5,
+        & > h6,
+        & > blockquote,
+        & > pre,
+        & > iframe,
+        & > figure,
+        & > table,
+        & > hr,
+        & > twitterwidget {
+            width: 100%;
+            max-width: $breakpoint-small;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        :first-child {
+            margin-top: 0;
+        }
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

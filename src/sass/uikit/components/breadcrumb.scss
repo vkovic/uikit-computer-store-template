@@ -1,0 +1,16 @@
+@mixin hook-breadcrumb-misc() {
+    .uk-breadcrumb > :nth-last-child(2):not(.uk-first-column)::before {
+        @media (max-width: $breakpoint-small) {
+            content: "←";
+            margin: 0 10px 0 -20px;
+        }
+    }
+
+    .uk-breadcrumb > :not(:nth-last-child(2)) {
+        display: none;
+
+        @media (min-width: $breakpoint-small) {
+            display: inline;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@mixin hook-table-misc() {
+    .uk-table tbody th {
+        font-size: $global-font-size;
+        vertical-align: top;
+        text-transform: none;
+    }
+
+    .uk-table tbody tr {
+        transition: background-color 0.1s linear;
+    }
+}

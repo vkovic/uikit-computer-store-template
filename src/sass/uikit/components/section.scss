@@ -1,0 +1,14 @@
+@mixin hook-section-misc() {
+    .uk-section-small {
+        padding-top: $section-small-padding-vertical;
+        padding-bottom: $section-small-padding-vertical;
+    }
+
+    /* Tablet landscape and bigger */
+    @media (min-width: $breakpoint-medium) {
+        .uk-section-small {
+            padding-top: $global-medium-margin;
+            padding-bottom: $global-medium-margin;
+        }
+    }
+}

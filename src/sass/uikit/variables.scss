@@ -1,0 +1,115 @@
+//
+// UIkit global variables definitions
+//
+// Default variables with default values needed for custom variables below ("Theme" section)
+// (check "~node_modules/uikit/src/scss/variables.scss" for list of all available variables)
+//
+
+$global-background: #FFF;
+$global-border-width: 1px;
+$global-border-width: 1px;
+$global-border: #E5E5E5;
+$global-control-height: 40px;
+$global-control-large-height: 55px;
+$global-font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+$global-large-font-size: 1.5rem;
+$global-large-font-size: 1.5rem;
+$global-margin: 20px;
+$global-margin: 20px;
+$global-medium-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+$global-medium-margin: 40px;
+$global-medium-margin: 40px;
+$global-muted-background: #F8F8F8;
+$global-muted-color: #999;
+$global-primary-background: #1e87f0;
+$global-small-font-size: 0.875rem;
+$global-xlarge-font-size: 2rem;
+$global-xsmall-font-size: 0.6875rem; // 11px
+$global-xsmall-gutter: 10px;
+$global-xsmall-margin: 5px;
+$global-xxlarge-font-size: 2.625rem;
+
+//
+// UIkit default variable overrides
+//
+
+$border-rounded-border-radius: 4px;
+
+//
+// Theme overrides
+//
+
+// Base
+$base-body-background: $global-muted-background;
+$base-h1-font-size-m: $global-xxlarge-font-size;
+$base-h1-font-size: $base-h1-font-size-m * 0.6;
+$base-h2-font-size-m: $global-xlarge-font-size;
+$base-h2-font-size: $base-h2-font-size-m * 0.7;
+$base-h3-font-size-m: $global-large-font-size;
+$base-h3-font-size: $base-h3-font-size-m * 0.8;
+$base-link-hover-text-decoration: none;
+
+// Section
+$section-primary-color-mode: none;
+$section-secondary-color-mode: none;
+$section-small-padding-vertical: $global-margin;
+
+// Card
+$card-default-background: $global-background;
+$card-primary-color-mode: none;
+$card-secondary-color-mode: none;
+
+// Article
+$article-title-font-size-m: $global-xxlarge-font-size;
+$article-title-font-size: $global-xxlarge-font-size * 0.6;
+
+// Button
+$button-border-width: $global-border-width;
+$button-default-background: transparent;
+$button-font-size: $global-small-font-size;
+$button-large-font-size: $global-small-font-size;
+$button-large-line-height: $global-control-large-height - ($button-border-width * 2) !default;
+$button-line-height: $global-control-height - ($button-border-width * 2);
+
+// Form
+$form-background: $global-background;
+$form-focus-background: $global-background;
+$form-stacked-margin-bottom: 5px;
+
+// Table
+$table-header-cell-font-weight: normal;
+$table-header-cell-color: $global-muted-color;
+
+// Lightbox
+$lightbox-background: #FFF;
+$lightbox-button-background: none;
+$lightbox-button-color: rgba(0, 0, 0, 0.7);
+$lightbox-button-hover-color: #000;
+$lightbox-item-color: rgba(0, 0, 0, 0.7);
+$lightbox-toolbar-background: transparent;
+$lightbox-toolbar-color: rgba(0, 0, 0, 0.7);
+$lightbox-toolbar-icon-color: rgba(0, 0, 0, 0.7);
+$lightbox-toolbar-icon-hover-color: #000;
+
+// Offcanvas
+$offcanvas-bar-background: $global-background;
+$offcanvas-bar-color-mode: none;
+
+// Notification
+$notification-message-background: $global-background;
+
+// Background
+$background-primary-background-lighten: lighten($global-primary-background, 40%);
+
+// Margin
+$margin-xsmall-margin: $global-xsmall-margin;
+
+// Navbar
+$navbar-nav-item-font-size: $global-small-font-size !default;
+$navbar-nav-item-height: 40px;
+
+// Overlay
+$overlay-primary-color-mode: none;
+
+// Import variables
+@import "../../../node_modules/uikit/src/scss/variables-theme";
