@@ -5,7 +5,7 @@
 ### Computer store e-commerce template built with `UIkit` using `Sass`
 
 This theme is port of
-[vkovic/uikit-computer-store-template](https://github.com/vkovic/uikit-computer-store-template/tree/master)
+[vkovic/uikit-computer-store-template](https://github.com/chekromul/uikit-ecommerce-template)
 to use `Sass` instead of `Less`.
 
 After I found this great e-commerce theme, I decided to spend some time adopting it to `Sass` preprocessor since lot of
