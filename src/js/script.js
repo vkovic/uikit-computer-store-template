@@ -1,17 +1,18 @@
 // Google Maps
-
 function initMap() {
     var elements = document.querySelectorAll('.js-map');
     Array.prototype.forEach.call(elements, function (el) {
         var lat = +el.dataset.latitude,
             lng = +el.dataset.longitude,
             zoom = +el.dataset.zoom;
+
         if ((lat !== '') && (lng !== '') && (zoom > 0)) {
             var map = new google.maps.Map(el, {
                 zoom: zoom,
                 center: {lat: lat, lng: lng},
                 disableDefaultUI: true
             });
+
             var marker = new google.maps.Marker({
                 map: map,
                 animation: google.maps.Animation.DROP,
@@ -22,7 +23,6 @@ function initMap() {
 }
 
 // Change view
-
 (function () {
     var container = document.getElementById('products');
 
@@ -52,7 +52,6 @@ function initMap() {
 })();
 
 // Increment
-
 function increment(incrementor, target) {
     var value = parseInt(document.getElementById(target).value, 10);
     value = isNaN(value) ? 0 : value;
@@ -66,7 +65,6 @@ function increment(incrementor, target) {
 }
 
 // Scroll to description
-
 (function () {
     UIkit.scroll('.js-scroll-to-description', {
         duration: 300,
@@ -75,7 +73,6 @@ function increment(incrementor, target) {
 })();
 
 // Update sticky tabs
-
 (function () {
     UIkit.util.on('.js-product-switcher', 'show', function () {
         UIkit.update();
@@ -83,7 +80,6 @@ function increment(incrementor, target) {
 })();
 
 // Add to cart
-
 (function () {
     var addToCartButtons = document.querySelectorAll('.js-add-to-cart');
 
@@ -95,17 +91,16 @@ function increment(incrementor, target) {
 })();
 
 // Action buttons
-
 (function () {
     var addToButtons = document.querySelectorAll('.js-add-to');
 
     Array.prototype.forEach.call(addToButtons, function (el) {
-        var link;
-        var message = '<span class="uk-margin-small-right" uk-icon=\'check\'></span>Added to ';
-        var links = {
-            favorites: '<a href="/favorites">favorites</a>',
-            compare: '<a href="/compare">compare</a>'
-        };
+        var link,
+            message = '<span class="uk-margin-small-right" uk-icon=\'check\'></span>Added to ',
+            links = {
+                favorites: '<a href="/favorites">favorites</a>',
+                compare: '<a href="/compare">compare</a>'
+            };
 
         if (el.classList.contains('js-add-to-favorites')) {
             link = links.favorites;

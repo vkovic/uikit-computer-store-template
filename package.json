@@ -15,14 +15,12 @@
     },
     "devDependencies": {},
     "dependencies": {
-        "browser-sync": "^2.26.3",
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-clean": "^0.4.0",
         "gulp-include": "^2.3.1",
         "gulp-pug": "^4.0.1",
         "gulp-sass": "^4.0.2",
-        "gulp-server-livereload": "^1.9.2",
         "gulp-webserver": "^0.9.1",
         "node-sass-tilde-importer": "^1.0.2",
         "uikit": "^3.0.0-dev.db69cd965"

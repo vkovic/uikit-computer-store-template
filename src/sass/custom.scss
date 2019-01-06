@@ -1,5 +1,44 @@
 //
-// Custom styles and mixins
+// Custom variables
+//
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+
+// Product card
+$product-card-title-max-lines: 3;
+$product-card-title-font-size: 16px;
+$product-card-title-line-height: 22px;
+$product-card-title-max-height: $product-card-title-max-lines * $product-card-title-line-height;
+$product-card-title-font-size-s: 18px;
+$product-card-title-line-height-s: 24px;
+$product-card-title-max-height-s: $product-card-title-max-lines * $product-card-title-line-height-s;
+$product-card-price-font-size: 20px;
+$product-card-add-button-width: 36px;
+$product-card-add-button-height: 36px;
+
+// List view product card
+$list-view-product-card-media-width: 33.3%;
+$list-view-product-card-media-min-width: 170px;
+$list-view-product-card-price-font-size: 24px;
+
+// Scrollbox
+$scrollbox-max-height: 300px;
+
+// Checkbox, radio
+$control-checkbox-image: "../../images/backgrounds/form-checkbox.svg";
+$control-radio-image: "../../images/backgrounds/form-radio.svg";
+$control-inputs-size: 16px;
+$control-inputs-hover: #F8F8F8;
+
+// Ratio
+$ratio-1-1: 100%;
+$ratio-3-2: 66.66%;
+$ratio-4-3: 75%;
+$ratio-16-9: 56.25%;
+
+//
+// Custom mixins
 //
 
 @mixin center($horizontal: true, $vertical: true) {
@@ -29,139 +68,13 @@
     }
 }
 
-// Breakpoints
-$breakpoint-tablet: 768px;
 
+//
 // Toolbar
-
-$header-toolbar-background: $global-secondary-background;
-$header-toolbar-nav-item-height: 40px;
-
-
-// Navbar
-
-$header-navbar-background: $global-background;
-$header-navbar-background: $global-background;
-$header-navbar-border-width: $global-border-width;
-$header-navbar-border: $global-border;
-$header-navbar-nav-item-height: 60px;
-$header-navbar-z-index: $global-z-index + 5;
-
-
-// Navbar button
-
-$header-navbar-button-badge-width: 18px;
-
-
-// Aside column
-
-$aside-column-width: 270px;
-
-
-// Product card
-
-$product-card-background-color: $global-background;
-$product-card-media-width: 40%;
-$product-card-title-max-lines: 3;
-$product-card-title-font-size: 16px;
-$product-card-title-line-height: 22px;
-$product-card-title-max-height: $product-card-title-max-lines * $product-card-title-line-height;
-$product-card-title-font-size-s: 18px;
-$product-card-title-line-height-s: 24px;
-$product-card-title-max-height-s: $product-card-title-max-lines * $product-card-title-line-height-s;
-$product-card-price-font-size: 20px;
-$product-card-add-button-width: 36px;
-$product-card-add-button-height: 36px;
-
-
-// List view product card
-
-$list-view-product-card-media-width: 33.3%;
-$list-view-product-card-media-min-width: 170px;
-$list-view-product-card-price-font-size: 24px;
-
-
-// Scrollbox
-
-$scrollbox-background-color: $global-background;
-$scrollbox-max-height: 300px;
-
-
-// Checkbox, radio
-
-$control-checkbox-image: "../../images/backgrounds/form-checkbox.svg";
-$control-radio-image: "../../images/backgrounds/form-radio.svg";
-$control-inputs-size: 16px;
-$control-inputs-margin-right: $global-small-margin;
-$control-inputs-hover: #F8F8F8;
-$control-inputs-border-width: $global-border-width;
-$control-inputs-border: $global-border;
-$control-checked-icon-color: $global-inverse-color;
-$control-focus-border: $global-primary-background;
-$control-checked-background: $global-primary-background;
-$control-disabled-border: $global-border;
-
-
-// Product
-
-$product-info-width: 390px;
-$product-price-font-size: 32px;
-
-
-// Quantity
-
-$quantity-width: 60px;
-
-
-// Compare table
-
-$compare-table-column-width: 240px;
-
-
-// Reviews
-
-$reviews-column-width: 200px;
-
-
-// Cart
-
-$cart-quantity-column-width: 115px;
-
-
-// Nav
-
-$custom-nav-item-padding-vertical: 10px;
-$custom-nav-item-padding-horizontal: 0;
-$custom-nav-item-active-border-width: 2px;
-$custom-nav-item-active-border-color: $global-primary-background;
-
-
-// Ratio
-
-$ratio-1-1: 100%;
-$ratio-3-2: 66.66%;
-$ratio-4-3: 75%;
-$ratio-16-9: 56.25%;
-
-
-// Media box
-
-$media-box-frame-border-width: $global-border-width;
-$media-box-frame-border: $global-border;
-$media-box-frame-border-hover-color: $global-primary-background;
-
-
-// Pseudo
-
-$pseudo-border-width: $global-border-width;
-$pseudo-border-style: dotted;
-
-
-// Toolbar
-// ========================================================================
+//
 
 .tm-toolbar-container:not(.uk-navbar-transparent) {
-    background: $header-toolbar-background;
+    background: $global-secondary-background;
 }
 
 .tm-toolbar-container .uk-navbar-item {
@@ -175,15 +88,15 @@ $pseudo-border-style: dotted;
 .tm-toolbar-container .uk-navbar-nav > li > a,
 .tm-toolbar-container .uk-navbar-item,
 .tm-toolbar-container .uk-navbar-toggle {
-    height: $header-toolbar-nav-item-height;
+    height: 40px;
 }
 
-
+//
 // Navbar
-// ========================================================================
+//
 
 .tm-navbar-container:not(.uk-navbar-transparent) {
-    background: $header-navbar-background;
+    background: $global-background;
 }
 
 .tm-navbar-container {
@@ -191,18 +104,18 @@ $pseudo-border-style: dotted;
 }
 
 .tm-navbar-container-fixed {
-    z-index: $header-navbar-z-index;
+    z-index: $global-z-index + 5;
 }
 
 .tm-navbar-container .uk-navbar-nav > li > a,
 .tm-navbar-container .uk-navbar-item,
 .tm-navbar-container .uk-navbar-toggle {
-    height: $header-navbar-nav-item-height;
+    height: 60px;
 }
 
-
+//
 // Navbar button
-// ========================================================================
+//
 
 .tm-navbar-button {
     position: relative;
@@ -217,14 +130,14 @@ $pseudo-border-style: dotted;
         position: absolute;
         top: 10px;
         right: 5px;
-        min-width: $header-navbar-button-badge-width;
-        height: $header-navbar-button-badge-width;
+        min-width: 18px;
+        height: 18px;
     }
 }
 
-
+//
 // Link to all
-// ========================================================================
+//
 
 .tm-link-to-all {
     & > * {
@@ -243,17 +156,17 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Aside column
-// ========================================================================
+//
 
 .tm-aside-column {
-    min-width: $aside-column-width;
+    min-width: 270px;
 }
 
-
+//
 // Change view
-// ========================================================================
+//
 
 .tm-change-view {
     display: none;
@@ -263,15 +176,15 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Product card
-// ========================================================================
+//
 
 .tm-product-card {
     display: flex;
     flex-direction: row;
     transition: box-shadow $box-shadow-duration ease-in-out;
-    background-color: $product-card-background-color;
+    background-color: $global-background;
     border-left: $global-border-width solid $global-border;
     border-bottom: $global-border-width solid $global-border;
     //box-shadow: 0 0 0 $global-border-width $global-border;
@@ -295,11 +208,10 @@ $pseudo-border-style: dotted;
 }
 
 // Media
-
 .tm-product-card-media {
     position: relative;
     box-sizing: border-box;
-    width: $product-card-media-width;
+    width: 40%;
     flex-shrink: 0;
 
     & > .tm-ratio {
@@ -322,7 +234,6 @@ $pseudo-border-style: dotted;
 }
 
 // Body
-
 .tm-product-card-body {
     display: flex;
     flex-direction: column;
@@ -339,7 +250,6 @@ $pseudo-border-style: dotted;
 }
 
 // Title
-
 .tm-product-card-title {
     font-size: $product-card-title-font-size;
     line-height: $product-card-title-line-height;
@@ -409,7 +319,6 @@ $pseudo-border-style: dotted;
 }
 
 // Labels
-
 .tm-product-card-labels {
     position: absolute;
     z-index: 1;
@@ -430,7 +339,6 @@ $pseudo-border-style: dotted;
 }
 
 // Actions
-
 .tm-product-card-actions {
     margin-right: 10px;
     margin-bottom: 2px;
@@ -454,7 +362,6 @@ $pseudo-border-style: dotted;
 }
 
 // List view
-
 .tm-products-list .tm-product-card {
     width: 100%;
     border-bottom: $global-border-width solid $global-border;
@@ -561,18 +468,18 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Actions buttons
-// ========================================================================
+//
 
 .tm-action-button-active,
 .tm-action-button-active > * {
     color: $text-danger-color;
 }
 
-
+//
 // Filters
-// ========================================================================
+//
 
 .tm-filters {
     display: none;
@@ -587,8 +494,7 @@ $pseudo-border-style: dotted;
     }
 }
 
-// off-canvas
-
+// Offcanvas
 .tm-filters.uk-offcanvas.uk-open {
     margin: 0;
     padding: 0;
@@ -619,9 +525,9 @@ $pseudo-border-style: dotted;
 
 }
 
-
+//
 // Scrollbox
-// ========================================================================
+//
 
 .tm-scrollbox {
     overflow: auto;
@@ -630,15 +536,15 @@ $pseudo-border-style: dotted;
     linear-gradient(rgba(255, 255, 255, 0), #FFF 70%) 0 100%,
     radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
     radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
-    background-color: $scrollbox-background-color;
+    background-color: $global-background;
     background-repeat: no-repeat;
     background-attachment: local, local, scroll, scroll;
     background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
 }
 
-
+//
 // Checkbox, radio
-// ========================================================================
+//
 
 .tm-checkbox,
 .tm-radio {
@@ -660,8 +566,8 @@ $pseudo-border-style: dotted;
 
     & + label::before {
         margin-top: 3px;
-        margin-right: $control-inputs-margin-right;
-        border: $control-inputs-border-width solid $control-inputs-border;
+        margin-right: $global-small-margin;
+        border: $global-border-width solid $global-border;
         flex-shrink: 0;
     }
 
@@ -671,7 +577,7 @@ $pseudo-border-style: dotted;
 
     &:checked + label::before {
         border-color: transparent;
-        background-color: $control-checked-background;
+        background-color: $global-primary-background;
     }
 
     & + label::after {
@@ -697,16 +603,16 @@ $pseudo-border-style: dotted;
 }
 
 .tm-checkbox:checked + label::after {
-    @include svg-fill($control-checkbox-image, "#000", $control-checked-icon-color);
+    @include svg-fill($control-checkbox-image, "#000", $global-inverse-color);
 }
 
 .tm-radio:checked + label::after {
-    @include svg-fill($control-radio-image, "#000", $control-checked-icon-color);
+    @include svg-fill($control-radio-image, "#000", $global-inverse-color);
 }
 
-
+//
 // Help icon
-// ========================================================================
+//
 
 .tm-help-icon {
     position: relative;
@@ -721,9 +627,9 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Slider
-// ========================================================================
+//
 
 .tm-slider-items {
 
@@ -744,9 +650,9 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Variations
-// ========================================================================
+//
 
 .tm-variations {
     margin: 0 0 0 -10px;
@@ -778,30 +684,28 @@ $pseudo-border-style: dotted;
     border-radius: 50%;
 }
 
-
+//
 // Product
-// ========================================================================
+//
 
 .tm-product-info {
     border-top: $global-border-width solid $global-border;
 
     @media (min-width: $breakpoint-medium) {
-        min-width: $product-info-width;
+        min-width: 390px;
         border-top: none;
         border-left: $global-border-width solid $global-border;
     }
 }
 
 // Price
-
 .tm-product-price {
-    font-size: $product-price-font-size;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1;
 }
 
 // Add to card button
-
 .tm-product-add-button {
     padding: 0 15px;
 
@@ -811,13 +715,11 @@ $pseudo-border-style: dotted;
 }
 
 // Description
-
 .tm-product-description {
     border-top: $global-border solid $global-border-width;
 }
 
 // Nav
-
 .tm-product-nav {
     display: flex;
     overflow: auto;
@@ -845,19 +747,19 @@ $pseudo-border-style: dotted;
     box-shadow: inset 0 -$global-border-width 0 0 $global-border;
 }
 
-
+//
 // Quantity
-// ========================================================================
+//
 
 .tm-quantity-input {
-    width: $quantity-width;
+    width: 60px;
     margin: 0 $global-xsmall-margin;
     text-align: center;
 }
 
-
+//
 // Slidenav
-// ========================================================================
+//
 
 .tm-slidenav.uk-invisible {
     visibility: visible !important;
@@ -865,9 +767,9 @@ $pseudo-border-style: dotted;
     opacity: 0.3;
 }
 
-
+//
 // Checkout
-// ========================================================================
+//
 
 .tm-checkout {
     counter-reset: list;
@@ -879,9 +781,9 @@ $pseudo-border-style: dotted;
     color: $global-muted-color;
 }
 
-
+//
 // Choose
-// ========================================================================
+//
 
 .tm-choose {
     position: relative;
@@ -914,7 +816,7 @@ $pseudo-border-style: dotted;
     }
 
     &::before {
-        border: $control-inputs-border-width solid $control-inputs-border;
+        border: $global-border-width solid $global-border;
         border-radius: 50%;
         flex-shrink: 0;
     }
@@ -925,7 +827,7 @@ $pseudo-border-style: dotted;
 
     &.uk-active::before {
         border-color: transparent;
-        background-color: $control-checked-background;
+        background-color: $global-primary-background;
     }
 
     &::after {
@@ -937,7 +839,7 @@ $pseudo-border-style: dotted;
         background-color: transparent;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        @include svg-fill($control-radio-image, "#000", $control-checked-icon-color);
+        @include svg-fill($control-radio-image, "#000", $global-inverse-color);
     }
 
     .tm-choose-title {
@@ -959,12 +861,11 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Wrapper
-// ========================================================================
+//
 
-// small card
-
+// Small card
 .uk-card-body.uk-card-small .tm-wrapper,
 .uk-card-small .uk-card-body .tm-wrapper {
     margin-right: -$card-small-body-padding-horizontal;
@@ -987,8 +888,7 @@ $pseudo-border-style: dotted;
     margin-left: $card-small-body-padding-horizontal;
 }
 
-// normal card
-
+// Normal card
 .uk-card-body .tm-wrapper {
     margin-right: -$card-body-padding-horizontal;
     margin-left: -$card-body-padding-horizontal;
@@ -1027,9 +927,9 @@ $pseudo-border-style: dotted;
 
 }
 
-
+//
 // Compare table
-// ========================================================================
+//
 
 .tm-compare-table {
     height: 0;
@@ -1039,8 +939,7 @@ $pseudo-border-style: dotted;
         vertical-align: top;
     }
 
-    td:not(:first-child),
-    th:not(:first-child) {
+    td:not(:first-child) {
         //border-left: $table-striped-border-width solid $table-striped-border;
     }
 
@@ -1055,12 +954,12 @@ $pseudo-border-style: dotted;
 }
 
 .tm-compare-table-column {
-    min-width: $compare-table-column-width;
+    min-width: 240px;
 }
 
-
+//
 // Rating
-// ========================================================================
+//
 
 .tm-rating {
     margin-left: -3px;
@@ -1071,42 +970,42 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Reviews
-// ========================================================================
+//
 
 .tm-reviews-column {
-    min-width: $reviews-column-width;
+    min-width: 200px;
 }
 
-
+//
 // Cart
-// ========================================================================
+//
 
 .tm-cart-quantity-column {
-    min-width: $cart-quantity-column-width !important;
+    min-width: 115px !important;
 }
 
-
+//
 // Nav
-// ========================================================================
+//
 
 .tm-nav > li > a {
-    padding: $custom-nav-item-padding-vertical $custom-nav-item-padding-horizontal;
+    padding: 10px 0;
 }
 
 .tm-nav > li.uk-active > a,
 .tm-nav > li > a:hover {
-    box-shadow: inset $custom-nav-item-active-border-width 0 0 $custom-nav-item-active-border-color;
+    box-shadow: inset 2px 0 0 $global-primary-background;
 }
 
 .tm-nav > li.uk-active > a {
     font-weight: 500;
 }
 
-
+//
 // Ratio
-// ========================================================================
+//
 
 .tm-ratio {
     position: relative;
@@ -1144,9 +1043,9 @@ $pseudo-border-style: dotted;
     padding-top: $ratio-16-9;
 }
 
-
+//
 // Media box
-// ========================================================================
+//
 
 .tm-media-box {
     display: block;
@@ -1155,7 +1054,7 @@ $pseudo-border-style: dotted;
 }
 
 .tm-media-box-frame {
-    border: $media-box-frame-border-width solid $media-box-frame-border;
+    border: $global-border-width solid $global-border;
     border-radius: $border-rounded-border-radius;
 }
 
@@ -1176,17 +1075,17 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Pseudo
-// ========================================================================
+//
 
 .tm-pseudo {
-    border-bottom: $pseudo-border-width $pseudo-border-style;
+    border-bottom: $global-border-width dotted;
 }
 
-
+//
 // Ignore container
-// ========================================================================
+//
 
 .tm-ignore-container {
     @media(max-width: $breakpoint-small) {
@@ -1196,17 +1095,17 @@ $pseudo-border-style: dotted;
     }
 }
 
-
+//
 // Remove shadow
-// ========================================================================
+//
 
 .tm-shadow-remove {
     box-shadow: none;
 }
 
-
+//
 // Shine effect
-// ========================================================================
+//
 
 .tm-shine {
     position: relative;
@@ -1236,8 +1135,9 @@ $pseudo-border-style: dotted;
     }
 }
 
+//
 // Grayscale
-// ========================================================================
+//
 
 .tm-grayscale {
     filter: grayscale(100%) opacity(50%);
