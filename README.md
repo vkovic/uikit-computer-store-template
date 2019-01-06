@@ -1,45 +1,79 @@
 # Computer store e-commerce template
 
-[![Downloads](https://poser.pugx.org/vkovic/uikit-computer-store-template/downloads)](https://packagist.org/packages/vkovic/uikit-computer-store-template)
-[![Stable](https://poser.pugx.org/vkovic/uikit-computer-store-template/v/stable)](https://packagist.org/packages/vkovic/uikit-computer-store-template)
-[![License](https://poser.pugx.org/vkovic/uikit-computer-store-template/license)](https://packagist.org/packages/vkovic/uikit-computer-store-template)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vkovic/uikit-computer-store-template/blob/master/LICENSE)
 
-### Computer store e-commerce template built with UIkIt, Sass and JS
+### Computer store e-commerce template built with `UIkit` using `Sass`
 
-- Minified size is just XXX kb
-- Icons mention
-- Ported from XXX
+This theme is port of
+[vkovic/uikit-computer-store-template](https://github.com/vkovic/uikit-computer-store-template/tree/master)
+to use `Sass` instead of `Less`.
 
+After I found this great e-commerce theme, I decided to spend some time adopting it to `Sass` preprocessor since lot of
+us are preferring it over `Less`.
 
-By default, from version 5 Laravel supports attribute casting. If we define `$cast` property on our model, Laravel will
-help us convert defined attributes to common data types. Currently supported cast types (Laravel 5.6) are: `integer`,
-`real`, `float`, `double`, `string`, `boolean`, `object`, `array`, `collection`, `date`, `datetime` and `timestamp`.
+Demo: [https://vkovic.github.io/uikit-computer-store-template](https://vkovic.github.io/uikit-computer-store-template)
 
-If those default cast types are not enough and you want to make your own, you'r on the right track.
+[![Computer store e-commerce template](https://raw.githubusercontent.com/vkovic/uikit-computer-store-template/gh-pages/images/preview.png "Computer store e-commerce template")](https://raw.githubusercontent.com/vkovic/uikit-computer-store-template/gh-pages/images/preview.png "Computer store e-commerce template")
 
 ---
 
 ## Compatibility
 
-The package is compatible with Laravel versions `>= 5.5`
+This theme requires `Node.js` version `>= 8.2`
+
+## Technologies
+
+- [UIkit](https://getuikit.com)
+- [Pug](https://pugjs.org)
+- [Sass](https://sass-lang.com/)
+- [Gulp](https://gulpjs.com)
 
 ## Installation
 
-Install the package via composer:
+To install theme first clone this repo
 
 ```bash
-composer require vkovic/uikit-computer-store-template
+git clone https://github.com/vkovic/uikit-computer-store-template.git
 ```
 
-## Example: Casting User Image
+and go to directory
 
-When saving an image, there is two things that needs to be done:
-1. Save image name (sometimes with path) into corresponding database field
-2. Save image physically on the disk
+```bash
+cd uikit-computer-store-template
+```
 
-As a guidance for this example we'll use default Laravel user model found in `app/User.php`.
+After this, there is 2 ways of installing it either using `npm` or `yarn`
 
-Beside basic, predefined fields: `name`, `email` and `password`, we also want to allow user to upload his avatar. Assume
-that we already have `users` table with `image` field (you should create seeder for this).
+### Install via `npm`
 
-To utilize custom casts, we'll need to add trait to user model, and via `$casts` property link it to the cast class.
+Install required packages via `npm`:
+
+```bash
+npm install
+```
+
+Compile project
+
+```bash
+npm run build
+```
+
+### Install via `yarn`
+
+Install required packages via `yarn`:
+
+```bash
+yarn
+```
+
+Compile project
+
+```bash
+yarn build
+```
+
+## Copyright and Credits
+
+- [Original (Less version) Theme Developer](https://github.com/chekromul)
+- [Shopping Categories Colection](https://thenounproject.com/jarosigrist/collection/shopping-categories) icons by
+Jaro Sigrist from Noun Project. Licensed under Creative Commons Attribution 3.0.

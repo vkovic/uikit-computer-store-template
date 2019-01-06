@@ -13,8 +13,10 @@
         "type": "git",
         "url": "https://github.com/vkovic/uikit-computer-store-template.git"
     },
-    "devDependencies": {},
-    "dependencies": {
+    "engines": {
+        "node": ">=8.2"
+    },
+    "devDependencies": {
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-clean": "^0.4.0",
@@ -22,7 +24,9 @@
         "gulp-pug": "^4.0.1",
         "gulp-sass": "^4.0.2",
         "gulp-webserver": "^0.9.1",
-        "node-sass-tilde-importer": "^1.0.2",
-        "uikit": "^3.0.0-dev.db69cd965"
+        "node-sass-tilde-importer": "^1.0.2"
+    },
+    "dependencies": {
+        "uikit": "^3.0.0-rc.26"
     }
 }
