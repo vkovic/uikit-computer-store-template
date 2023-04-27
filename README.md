@@ -33,7 +33,7 @@ This theme requires `Node.js` version `>= 8.2`
 To install theme first clone this repo
 
 ```bash
-git clone https://github.com/vkovic/uikit-computer-store-template.git
+git clone https://github.com/nguyenhongthe/uikit-computer-store-template.git
 ```
 
 and go to directory
@@ -76,4 +76,4 @@ yarn build
 
 - [Original (Less version) Theme Developer](https://github.com/chekromul)
 - [Shopping Categories Colection](https://thenounproject.com/jarosigrist/collection/shopping-categories) icons by
-Jaro Sigrist from Noun Project. Licensed under Creative Commons Attribution 3.0.
+  Jaro Sigrist from Noun Project. Licensed under Creative Commons Attribution 3.0.
